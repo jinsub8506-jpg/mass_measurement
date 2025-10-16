@@ -1,14 +1,37 @@
 body {
   font-family: sans-serif;
   background: #eef;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 20px;
-  margin-left: 200px;
+  /* Removed properties that cause reflowing */
+  margin: 0;
+  padding: 0;
   user-select: none;
-  /* 터치 시 발생하는 하이라이트 효과 제거 */
   -webkit-tap-highlight-color: transparent;
+}
+
+/* This new container holds the entire simulation, giving it a fixed size. */
+#app-container {
+  position: relative;
+  width: 960px;
+  height: 800px;
+  margin: 0 auto; /* Center the app on larger screens */
+}
+
+/* Positioned all major elements absolutely within the container. */
+h2 {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+}
+
+.description {
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  background-color: #ffffffd0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
 }
 
 #background-wrapper {
@@ -23,16 +46,9 @@ body {
   z-index: -3;
 }
 
-.description {
-  background-color: #ffffffd0;
-  padding: 10px 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-}
-
 #weight-pool {
-  position: fixed;
+  /* Changed from 'fixed' to 'absolute' to stay within app-container */
+  position: absolute;
   top: 250px;
   left: 30px;
   width: 400px;
@@ -87,6 +103,7 @@ body {
 .weight4[data-id="w12"] { top: 125px; }
 .weight4[data-id="w13"] { top: 195px; }
 
+/* Keep 'fixed' positioning for dragging so it appears on top of everything. */
 .dragging {
   position: fixed;
   z-index: 1000;
@@ -201,7 +218,8 @@ body {
 }
 
 #bottom-pools-container {
-  position: fixed;
+  /* Changed from 'fixed' to 'absolute' to stay within app-container */
+  position: absolute;
   top: 530px;
   left: 30px;
   display: flex;

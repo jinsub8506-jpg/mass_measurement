@@ -7,70 +7,72 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="background-wrapper"></div>
+  <div id="app-container">
+    <div id="background-wrapper"></div>
 
-  <h2>⚖️ 전자저울로 질량 측정하기</h2>
-  <p class="description">
-    왼쪽 보관함의 물체를 저울로 드래그하여 올려놓으세요.<br>
-    저울의 화면에 표시되는 값으로 물체의 질량을 측정할 수 있습니다.
-  </p>
+    <h2>⚖️ 전자저울로 질량 측정하기</h2>
+    <p class="description">
+      왼쪽 보관함의 물체를 저울로 드래그하여 올려놓으세요.<br>
+      저울의 화면에 표시되는 값으로 물체의 질량을 측정할 수 있습니다.
+    </p>
 
-  <div id="weight-pool">
-    <div class="pool-column">
-      <div class="weight-label">25g 추<br>(황동)</div>
-      <div class="weight1" draggable="true" data-id="w1"></div>
-      <div class="weight1" draggable="true" data-id="w2"></div>
-      <div class="weight1" draggable="true" data-id="w3"></div>
-      <div class="weight1" draggable="true" data-id="w4"></div>
-    </div>
-    <div class="pool-column">
-      <div class="weight-label">50g 추<br>(황동)</div>
-      <div class="weight2" draggable="true" data-id="w5"></div>
-      <div class="weight2" draggable="true" data-id="w6"></div>
-      <div class="weight2" draggable="true" data-id="w7"></div>
-      <div class="weight2" draggable="true" data-id="w8"></div>
-    </div>
-    <div class="pool-column">
-      <div class="weight-label">100g 추<br>(황동)</div>
-      <div class="weight3" draggable="true" data-id="w9"></div>
-      <div class="weight3" draggable="true" data-id="w10"></div>
-    </div>
-    <div class="pool-column">
-      <div class="weight-label">임의의 물체</div>
-      <div class="weight4" data-animal-type="rabbit" draggable="true" data-id="w11"></div>
-      <div class="weight4" data-animal-type="cat" draggable="true" data-id="w12"></div>
-      <div class="weight4" data-animal-type="powder" draggable="true" data-id="w13"></div>
-    </div>
-  </div>
-
-  <div id="bottom-pools-container">
-    <div id="weight-pool2">
+    <div id="weight-pool">
       <div class="pool-column">
-          <div class="weight-label">페트리 접시</div>
-          <div class="weighing-item petri-dish" draggable="true" data-id="p1"></div>
+        <div class="weight-label">25g 추<br>(황동)</div>
+        <div class="weight1" draggable="true" data-id="w1"></div>
+        <div class="weight1" draggable="true" data-id="w2"></div>
+        <div class="weight1" draggable="true" data-id="w3"></div>
+        <div class="weight1" draggable="true" data-id="w4"></div>
       </div>
       <div class="pool-column">
-          <div class="weight-label">약포지</div>
-          <div class="weighing-item weighing-paper" draggable="true" data-id="wp1"></div>
+        <div class="weight-label">50g 추<br>(황동)</div>
+        <div class="weight2" draggable="true" data-id="w5"></div>
+        <div class="weight2" draggable="true" data-id="w6"></div>
+        <div class="weight2" draggable="true" data-id="w7"></div>
+        <div class="weight2" draggable="true" data-id="w8"></div>
+      </div>
+      <div class="pool-column">
+        <div class="weight-label">100g 추<br>(황동)</div>
+        <div class="weight3" draggable="true" data-id="w9"></div>
+        <div class="weight3" draggable="true" data-id="w10"></div>
+      </div>
+      <div class="pool-column">
+        <div class="weight-label">임의의 물체</div>
+        <div class="weight4" data-animal-type="rabbit" draggable="true" data-id="w11"></div>
+        <div class="weight4" data-animal-type="cat" draggable="true" data-id="w12"></div>
+        <div class="weight4" data-animal-type="powder" draggable="true" data-id="w13"></div>
       </div>
     </div>
 
-    <div id="explanation-pool">
-      <div class="weight-label">※설명</div>
-      <div id="explanation-text"></div>
-    </div>
-  </div>
-
-
-  <div id="simulation-area">
-    <div id="electronic-scale">
-      <div id="mass-display">0.0 g</div>
-      <div id="scale-buttons">
-        <button id="power-button">전원</button>
-        <button class="control-button" id="settings-button">설정</button>
-        <button class="control-button" id="zero-button">영점</button>
+    <div id="bottom-pools-container">
+      <div id="weight-pool2">
+        <div class="pool-column">
+            <div class="weight-label">페트리 접시</div>
+            <div class="weighing-item petri-dish" draggable="true" data-id="p1"></div>
+        </div>
+        <div class="pool-column">
+            <div class="weight-label">약포지</div>
+            <div class="weighing-item weighing-paper" draggable="true" data-id="wp1"></div>
+        </div>
       </div>
-      <div id="weighing-pan"></div>
+
+      <div id="explanation-pool">
+        <div class="weight-label">※설명</div>
+        <div id="explanation-text"></div>
+      </div>
+    </div>
+
+
+    <div id="simulation-area">
+      <div id="electronic-scale">
+        <div id="mass-display">0.0 g</div>
+        <div id="scale-buttons">
+          <button id="power-button">전원</button>
+          <button class="control-button" id="settings-button">설정</button>
+          <button class="control-button" id="zero-button">영점</button>
+        </div>
+        <div id="weighing-pan"></div>
+      </div>
     </div>
   </div>
 
