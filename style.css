@@ -13,7 +13,7 @@ body {
   position: relative;
   width: 960px;
   height: 800px;
-  margin: 0 auto; /* Center the app on larger screens */
+  /* 'margin: 0 auto;' removed to prevent centering. */
 }
 
 /* Positioned all major elements absolutely within the container. */
